@@ -1,37 +1,46 @@
-import os
-import sys
 import cv2
 import numpy as np
-from PIL import Image
+import os
 
-def prep_photo(input_path, output_path):
-    print(f"Loading {input_path}...")
+def process_portrait(input_path, output_path, width=80):
     img = cv2.imread(input_path)
     if img is None:
-        raise ValueError(f"Could not load image at {input_path}")
+        raise ValueError(f"Could not load {input_path}")
         
-    # Convert to grayscale
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    h, w, _ = img.shape
     
-    # Apply CLAHE for high contrast details (eyes, hair, features)
-    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
-    enhanced = clahe.apply(gray)
+    # 1. Crop to focus on face and upper chest for max detail
+    # The image is 1080x1200 approx. Crop top 5% to 85%
+    crop_top = int(h * 0.05)
+    crop_bottom = int(h * 0.85)
+    crop_left = int(w * 0.10)
+    crop_right = int(w * 0.90)
     
-    # Normalize brightness & stretch contrast
-    # Map background (which is light gray in photo) to pure white (255)
-    # So spaces ' ' are rendered in ASCII
-    normalized = cv2.normalize(enhanced, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX)
+    cropped = img[crop_top:crop_bottom, crop_left:crop_right]
     
-    # Light background boost
-    # Anything above 210 gets pushed towards 255 (white)
-    mask = normalized > 200
-    normalized[mask] = np.clip(normalized[mask] * 1.15, 0, 255).astype(np.uint8)
+    # 2. Convert to grayscale
+    gray = cv2.cvtColor(cropped, cv2.COLOR_BGR2GRAY)
+    
+    # 3. Bilateral filter to smooth skin noise while preserving sharp edges (glasses, beard, eyes)
+    filtered = cv2.bilateralFilter(gray, d=9, sigmaColor=75, sigmaSpace=75)
+    
+    # 4. Enhance contrast using CLAHE
+    clahe = cv2.createCLAHE(clipLimit=2.5, tileGridSize=(8,8))
+    contrast = clahe.apply(filtered)
+    
+    # 5. Non-linear gamma curve to separate skin (bright/clean) from dark features (glasses, hair, beard, suit)
+    # Skin in portrait is around 140-220 brightness. We want skin to be very light (> 230).
+    gamma = 1.6
+    invGamma = 1.0 / gamma
+    table = np.array([((i / 255.0) ** invGamma) * 255 for i in np.arange(0, 256)]).astype("uint8")
+    adjusted = cv2.LUT(contrast, table)
+    
+    # Background in original photo is white/light gray (> 210) -> force to pure 255 (white = spaces)
+    adjusted[adjusted > 190] = 255
     
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    cv2.imwrite(output_path, normalized)
-    print(f"Prepped image saved to {output_path}")
+    cv2.imwrite(output_path, adjusted)
+    print("Processed portrait saved.")
 
 if __name__ == "__main__":
-    src = sys.argv[1] if len(sys.argv) > 1 else os.path.join("photo", "portrait-professionnel (1).png")
-    dst = os.path.join("data", "source-prepped.png")
-    prep_photo(src, dst)
+    process_portrait("photo/portrait-professionnel (1).png", "data/source-prepped.png")
