@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 370" width="540" height="370">
+  <style>
+    .card-bg { fill: #0d1117; rx: 10px; ry: 10px; }
+    .card-border { stroke: #30363d; stroke-width: 1; fill: none; rx: 10px; ry: 10px; }
+    .term-title { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; fill: #8b949e; }
+    .user-header { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 14px; font-weight: bold; fill: #58a6ff; }
+    .separator { stroke: #30363d; stroke-width: 1; }
+    .row-key { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11.5px; font-weight: bold; }
+    .row-val { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11.5px; fill: #c9d1d9; }
+    .color-block { rx: 3px; ry: 3px; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .anim-row { opacity: 0; animation: fadeIn 0.4s ease-out forwards; }
+  </style>
+  <rect width="540" height="370" class="card-bg" />
+  <rect width="540" height="370" class="card-border" />
+  <circle cx="15" cy="14" r="4.5" fill="#ff5f56" />
+  <circle cx="28" cy="14" r="4.5" fill="#ffbd2e" />
+  <circle cx="41" cy="14" r="4.5" fill="#27c93f" />
+  <text x="270" y="17" class="term-title" text-anchor="middle">echlouchi@portfolio ~ neofetch</text>
+  <g class="anim-row" style="animation-delay: 0.1s;">
+    <text x="24" y="48" class="user-header">Ali Echlouchi</text>
+    <text x="129" y="48" font-family="monospace" font-size="14" fill="#8b949e">@</text>
+    <text x="144" y="48" font-family="monospace" font-size="14" fill="#79c0ff">EchlouchiAli07</text>
+    <line x1="24" y1="58" x2="516" y2="58" class="separator" />
+  </g>
+  <g class="anim-row" style="animation-delay: 0.20s;">
+    <text x="24" y="80" class="row-key" fill="#79c0ff">OS:</text>
+    <text x="119" y="80" class="row-val">Master IS2IA @ ESISA Fès (2025 - 2027)</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.28s;">
+    <text x="24" y="104" class="row-key" fill="#7ee787">Role:</text>
+    <text x="119" y="104" class="row-val">AI &amp; Full-Stack Engineer Student</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.36s;">
+    <text x="24" y="128" class="row-key" fill="#d2a8ff">Status:</text>
+    <text x="119" y="128" class="row-val">Looking for PFE Internship (Feb 2027)</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.44s;">
+    <text x="24" y="152" class="row-key" fill="#c9d1d9">AI / ML:</text>
+    <text x="119" y="152" class="row-val">ML (scikit-learn), NLP (CamemBERT), LLM (Gemini, OpenRouter)</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.52s;">
+    <text x="24" y="176" class="row-key" fill="#c9d1d9">Full-Stack:</text>
+    <text x="119" y="176" class="row-val">Next.js 15/16, NestJS 11, FastAPI, React 19, TypeScript</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.60s;">
+    <text x="24" y="200" class="row-key" fill="#c9d1d9">Databases:</text>
+    <text x="119" y="200" class="row-val">PostgreSQL, Supabase, TypeORM, MongoDB</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.68s;">
+    <text x="24" y="224" class="row-key" fill="#8b949e">Experience:</text>
+    <text x="119" y="224" class="row-val">CHU Hassan II (Triage IA), Business Partners (ERP COD)</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.76s;">
+    <text x="24" y="248" class="row-key" fill="#8b949e">Projects:</text>
+    <text x="119" y="248" class="row-val">EnergyAI SaaS, Interactive Chatbot PFA, Transport Analytics</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.84s;">
+    <text x="24" y="272" class="row-key" fill="#8b949e">Certs:</text>
+    <text x="119" y="272" class="row-val">Cisco Ethical Hacker, IBM Data Analysis, Intro to IoT</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 0.92s;">
+    <text x="24" y="296" class="row-key" fill="#8b949e">Languages:</text>
+    <text x="119" y="296" class="row-val">French (TCF B2), English (Inter.), Arabic (Native)</text>
+  </g>
+  <g class="anim-row" style="animation-delay: 1.10s;">
+    <line x1="24" y1="320" x2="516" y2="320" class="separator" />
+    <rect x="24" y="330" width="26" height="10" fill="#484f58" class="color-block" />
+    <rect x="54" y="330" width="26" height="10" fill="#ff7b72" class="color-block" />
+    <rect x="84" y="330" width="26" height="10" fill="#7ee787" class="color-block" />
+    <rect x="114" y="330" width="26" height="10" fill="#ffa657" class="color-block" />
+    <rect x="144" y="330" width="26" height="10" fill="#79c0ff" class="color-block" />
+    <rect x="174" y="330" width="26" height="10" fill="#d2a8ff" class="color-block" />
+    <rect x="204" y="330" width="26" height="10" fill="#a5d6ff" class="color-block" />
+    <rect x="24" y="344" width="26" height="10" fill="#6e7681" class="color-block" />
+    <rect x="54" y="344" width="26" height="10" fill="#ffa198" class="color-block" />
+    <rect x="84" y="344" width="26" height="10" fill="#56d364" class="color-block" />
+    <rect x="114" y="344" width="26" height="10" fill="#e3b341" class="color-block" />
+    <rect x="144" y="344" width="26" height="10" fill="#58a6ff" class="color-block" />
+    <rect x="174" y="344" width="26" height="10" fill="#bc8cff" class="color-block" />
+    <rect x="204" y="344" width="26" height="10" fill="#39c5cf" class="color-block" />
+  </g>
+</svg>
