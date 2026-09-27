@@ -1,12 +1,10 @@
 import os
 
 def generate_info_card(output_path="info-card.svg"):
-    width = 540
-    height = 370
+    width = 490
+    height = 520
     padding_x = 24
-    padding_y = 20
     
-    # Custom color palette for terminal card
     bg_color = "#0d1117"
     border_color = "#30363d"
     key_color = "#79c0ff"      # Soft blue
@@ -19,13 +17,16 @@ def generate_info_card(output_path="info-card.svg"):
         ("OS", "Master IS2IA @ ESISA Fès (2025 - 2027)", key_color),
         ("Role", "AI & Full-Stack Engineer Student", highlight_color),
         ("Status", "Looking for PFE Internship (Feb 2027)", accent_color),
-        ("AI / ML", "ML (scikit-learn), NLP (CamemBERT), LLM (Gemini, OpenRouter)", val_color),
-        ("Full-Stack", "Next.js 15/16, NestJS 11, FastAPI, React 19, TypeScript", val_color),
+        ("AI / ML", "ML (scikit-learn), NLP (CamemBERT)", val_color),
+        ("LLM Integration", "Gemini 1.5, OpenRouter API, Hybrid AI", val_color),
+        ("Full-Stack", "Next.js 15/16, NestJS 11, FastAPI, React 19", val_color),
+        ("Languages", "TypeScript, Python, JavaScript, SQL", val_color),
         ("Databases", "PostgreSQL, Supabase, TypeORM, MongoDB", val_color),
-        ("Experience", "CHU Hassan II (Triage IA), Business Partners (ERP COD)", sub_color),
-        ("Projects", "EnergyAI SaaS, Interactive Chatbot PFA, Transport Analytics", sub_color),
-        ("Certs", "Cisco Ethical Hacker, IBM Data Analysis, Intro to IoT", sub_color),
-        ("Languages", "French (TCF B2), English (Inter.), Arabic (Native)", sub_color),
+        ("Experience", "CHU Hassan II (Scoring Triage IA)", sub_color),
+        ("ERP COD", "Business Partners (Next.js 16, Supabase)", sub_color),
+        ("Projects", "EnergyAI SaaS, Interactive Chatbot PFA", sub_color),
+        ("Certs", "Cisco Ethical Hacker, IBM Data Analysis", sub_color),
+        ("Languages", "French (TCF B2), English (Inter.), Arabic", sub_color),
     ]
     
     svg = []
@@ -39,8 +40,6 @@ def generate_info_card(output_path="info-card.svg"):
     svg.append('    .row-key { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11.5px; font-weight: bold; }')
     svg.append('    .row-val { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11.5px; fill: #c9d1d9; }')
     svg.append('    .color-block { rx: 3px; ry: 3px; }')
-    
-    # CSS animations for staggered line entry
     svg.append('    @keyframes fadeIn {')
     svg.append('      from { opacity: 0; transform: translateY(6px); }')
     svg.append('      to { opacity: 1; transform: translateY(0); }')
@@ -67,28 +66,27 @@ def generate_info_card(output_path="info-card.svg"):
     svg.append('  </g>')
     
     # Staggered rows
-    start_y = 80
-    row_height = 24
+    start_y = 82
+    row_height = 27
     
     for i, (key, val, k_color) in enumerate(rows):
         y = start_y + i * row_height
-        delay = 0.2 + i * 0.08
+        delay = 0.15 + i * 0.06
         svg.append(f'  <g class="anim-row" style="animation-delay: {delay:.2f}s;">')
         svg.append(f'    <text x="{padding_x}" y="{y}" class="row-key" fill="{k_color}">{key}:</text>')
-        # Calculate padding for aligned values
-        val_x = padding_x + 95
+        val_x = padding_x + 115
         escaped_val = val.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         svg.append(f'    <text x="{val_x}" y="{y}" class="row-val">{escaped_val}</text>')
         svg.append('  </g>')
         
     # Neofetch color palette blocks at bottom
-    palette_y = start_y + len(rows) * row_height + 10
+    palette_y = height - 40
     colors_dark = ["#484f58", "#ff7b72", "#7ee787", "#ffa657", "#79c0ff", "#d2a8ff", "#a5d6ff"]
     colors_bright = ["#6e7681", "#ffa198", "#56d364", "#e3b341", "#58a6ff", "#bc8cff", "#39c5cf"]
     
-    delay_blocks = 0.2 + len(rows) * 0.08 + 0.1
+    delay_blocks = 0.2 + len(rows) * 0.06 + 0.1
     svg.append(f'  <g class="anim-row" style="animation-delay: {delay_blocks:.2f}s;">')
-    svg.append(f'    <line x1="{padding_x}" y1="{palette_y - 10}" x2="{width - padding_x}" y2="{palette_y - 10}" class="separator" />')
+    svg.append(f'    <line x1="{padding_x}" y1="{palette_y - 12}" x2="{width - padding_x}" y2="{palette_y - 12}" class="separator" />')
     
     block_w = 26
     block_h = 10
