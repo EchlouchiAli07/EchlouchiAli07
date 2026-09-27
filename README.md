@@ -7,7 +7,7 @@
 <table>
   <tr>
     <td valign="top" align="center">
-      <img src="./avi-ascii.svg" width="370" alt="Ali Echlouchi Portrait" />
+      <img src="./avi-ascii-v2.svg" width="370" alt="Ali Echlouchi Portrait" />
     </td>
     <td valign="top" align="center">
       <img src="./info-card.svg" width="490" alt="Ali Echlouchi Neofetch Card" />
