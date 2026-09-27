@@ -2,66 +2,61 @@ import os
 import cv2
 import numpy as np
 
-RAMP = " .`:-=+*cs#%@"
+RAMP = " .:-=+*#%@"
 
-def process_portrait_to_ascii(photo_path, char_width=68):
-    img = cv2.imread(photo_path)
+def prepped_image_to_ascii(prepped_path, char_width=72):
+    img = cv2.imread(prepped_path, cv2.IMREAD_GRAYSCALE)
     if img is None:
-        raise FileNotFoundError(f"Could not load {photo_path}")
+        raise FileNotFoundError(f"Could not load {prepped_path}")
         
-    h, w, _ = img.shape
+    h, w = img.shape
+    aspect_ratio = h / w
+    # Monospace aspect ~ 0.50
+    char_height = int(char_width * aspect_ratio * 0.50)
     
-    # Crop to head and torso (similar to reference)
-    crop_top = int(h * 0.02)
-    crop_bottom = int(h * 0.88)
-    crop_left = int(w * 0.05)
-    crop_right = int(w * 0.95)
-    cropped = img[crop_top:crop_bottom, crop_left:crop_right]
+    resized = cv2.resize(img, (char_width, char_height), interpolation=cv2.INTER_AREA)
     
-    gray = cv2.cvtColor(cropped, cv2.COLOR_BGR2GRAY)
-    
-    # Calculate aspect ratio (monospace chars are ~2.0x taller than wide)
-    aspect_ratio = gray.shape[0] / gray.shape[1]
-    char_height = int(char_width * aspect_ratio * 0.52)
-    
-    resized = cv2.resize(gray, (char_width, char_height), interpolation=cv2.INTER_AREA)
-    
-    # Background thresholding:
-    # Any pixel above 215 is background -> map to pure space " "
-    # For subject pixels: invert brightness (dark hair/beard -> high density @, %; light skin -> low density -, .)
     lines = []
-    ramp_len = len(RAMP)
-    
     for y in range(char_height):
         row_str = ""
         for x in range(char_width):
             val = resized[y, x]
-            if val >= 215:
-                # Background -> empty space
-                row_str += " "
+            if val >= 235:
+                char = " "
+            elif val >= 205:
+                char = "."
+            elif val >= 175:
+                char = ":"
+            elif val >= 145:
+                char = "-"
+            elif val >= 120:
+                char = "="
+            elif val >= 95:
+                char = "+"
+            elif val >= 70:
+                char = "*"
+            elif val >= 45:
+                char = "#"
+            elif val >= 25:
+                char = "%"
             else:
-                # Subject pixel: map 0..214 to density ramp
-                # val=0 (black hair/suit) -> @ (index ramp_len-1)
-                # val=214 (light skin) -> . or space
-                norm = (214 - val) / 214.0
-                idx = int(norm * (ramp_len - 1))
-                idx = max(0, min(ramp_len - 1, idx))
-                row_str += RAMP[idx]
+                char = "@"
+            row_str += char
         lines.append(row_str)
         
     return lines, char_width, char_height
 
 def generate_exact_ascii_svg(lines, width, height, output_path="avi-ascii.svg"):
-    char_w = 5.2
+    char_w = 4.8
     char_h = 8.5
-    padding_x = 18
+    padding_x = 14
     padding_y = 35
     
     svg_w = 370
     svg_h = 520
     
     total_rows = len(lines)
-    row_delay = 0.03
+    row_delay = 0.025
     anim_duration = 0.10
     
     svg = []
@@ -70,7 +65,7 @@ def generate_exact_ascii_svg(lines, width, height, output_path="avi-ascii.svg"):
     svg.append('    .bg { fill: #0d1117; rx: 10px; ry: 10px; }')
     svg.append('    .border { stroke: #30363d; stroke-width: 1; fill: none; rx: 10px; ry: 10px; }')
     svg.append('    .title-text { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; fill: #8b949e; }')
-    svg.append('    .ascii-text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 8.5px; fill: #c9d1d9; white-space: pre; }')
+    svg.append('    .ascii-text { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; font-size: 8.5px; fill: #58a6ff; white-space: pre; }')
     svg.append('    .prompt-user { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; font-weight: bold; fill: #58a6ff; }')
     svg.append('    .prompt-path { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; fill: #79c0ff; }')
     svg.append('    .prompt-cmd { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; fill: #c9d1d9; }')
@@ -119,9 +114,9 @@ def generate_exact_ascii_svg(lines, width, height, output_path="avi-ascii.svg"):
     os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(svg))
-    print(f"Exact ASCII Portrait SVG saved to {output_path}")
+    print(f"High Detail ASCII Portrait SVG saved to {output_path}")
 
 if __name__ == "__main__":
-    photo = os.path.join("photo", "portrait-professionnel (1).png")
-    lines, w, h = process_portrait_to_ascii(photo, char_width=66)
+    prepped = os.path.join("data", "source-prepped.png")
+    lines, w, h = prepped_image_to_ascii(prepped, char_width=72)
     generate_exact_ascii_svg(lines, w, h, "avi-ascii.svg")
