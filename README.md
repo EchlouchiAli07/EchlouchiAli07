@@ -1,27 +1,21 @@
 <div align="center">
 
-### <code>echlouchi@github ~ $ ./contributions.sh</code>
 <img src="./contrib-heatmap.svg" width="860" alt="GitHub Contribution Heatmap" />
 
 <br><br>
 
-### <code>echlouchi@github ~ $ whoami --neofetch</code>
 <table>
   <tr>
     <td valign="top" align="center">
-      <img src="./avi-ascii.svg" width="370" alt="Ali Echlouchi ASCII Portrait" />
+      <img src="./avi-ascii.svg" width="370" alt="Ali Echlouchi Portrait" />
     </td>
-    <td valign="top">
+    <td valign="top" align="center">
       <img src="./info-card.svg" width="490" alt="Ali Echlouchi Neofetch Card" />
     </td>
   </tr>
 </table>
 
-</div>
-
-<br>
-
-<h3 align="center"><code>echlouchi@github ~ $ cat skills.json</code></h3>
+<br><br>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
@@ -36,6 +30,6 @@
 
 ---
 
-<div align="center">
-  <sub>Built with Python & SVG animation · Auto-refreshed daily via GitHub Actions</sub>
+<sub>Built with Python & SVG animation · Auto-refreshed daily via GitHub Actions</sub>
+
 </div>
