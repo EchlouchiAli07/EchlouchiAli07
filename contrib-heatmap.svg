@@ -20,8 +20,8 @@
   <circle cx="28" cy="14" r="4.5" fill="#ffbd2e" />
   <circle cx="41" cy="14" r="4.5" fill="#27c93f" />
   <text x="430" y="17" class="title-text" text-anchor="middle">echlouchi@github ~ ./contributions.sh</text>
-  <text x="24" y="45" class="stat-label">20 <tspan class="stat-sub">contributions in the last year</tspan></text>
-  <text x="836" y="45" class="stat-label" text-anchor="end">🔥 2 days streak <tspan class="stat-sub">(max: 2d)</tspan></text>
+  <text x="24" y="45" class="stat-label">21 <tspan class="stat-sub">contributions in the last year</tspan></text>
+  <text x="836" y="45" class="stat-label" text-anchor="end">🔥 3 days streak <tspan class="stat-sub">(max: 3d)</tspan></text>
   <text x="34" y="88" class="day-label">Mon</text>
   <text x="34" y="116" class="day-label">Wed</text>
   <text x="34" y="144" class="day-label">Fri</text>
@@ -391,7 +391,8 @@
   <rect x="773" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.95s;" />
   <rect x="787" y="65" width="11" height="11" fill="#39d353" class="day-box anim-box" style="animation-delay: 0.88s;" />
   <rect x="787" y="79" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.89s;" />
-  <rect x="787" y="93" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.91s;" />
+  <rect x="787" y="93" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.91s;" />
+  <rect x="787" y="107" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.92s;" />
   <text x="59" y="190" class="day-label">Less</text>
   <rect x="86" y="181" width="11" height="11" fill="#161b22" class="day-box" />
   <rect x="100" y="181" width="11" height="11" fill="#0e4429" class="day-box" />
