@@ -1,48 +1,13 @@
 {
   "username": "EchlouchiAli07",
-  "total_contributions": 24,
-  "current_streak": 6,
-  "longest_streak": 6,
+  "total_contributions": 26,
+  "current_streak": 8,
+  "longest_streak": 8,
   "best_day": {
     "date": "2026-09-27",
     "count": 15
   },
   "days": [
-    {
-      "date": "2025-09-28",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-09-29",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-09-30",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-10-01",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-10-02",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-10-03",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-10-04",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-10-05",
       "count": 0,
@@ -1860,8 +1825,13 @@
     },
     {
       "date": "2026-10-03",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 2
+    },
+    {
+      "date": "2026-10-04",
+      "count": 1,
+      "level": 2
     }
   ]
 }
