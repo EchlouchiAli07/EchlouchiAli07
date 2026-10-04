@@ -20,8 +20,8 @@
   <circle cx="28" cy="14" r="4.5" fill="#ffbd2e" />
   <circle cx="41" cy="14" r="4.5" fill="#27c93f" />
   <text x="430" y="17" class="title-text" text-anchor="middle">echlouchi@github ~ ./contributions.sh</text>
-  <text x="24" y="45" class="stat-label">24 <tspan class="stat-sub">contributions in the last year</tspan></text>
-  <text x="836" y="45" class="stat-label" text-anchor="end">🔥 6 days streak <tspan class="stat-sub">(max: 6d)</tspan></text>
+  <text x="24" y="45" class="stat-label">26 <tspan class="stat-sub">contributions in the last year</tspan></text>
+  <text x="836" y="45" class="stat-label" text-anchor="end">🔥 8 days streak <tspan class="stat-sub">(max: 8d)</tspan></text>
   <text x="34" y="88" class="day-label">Mon</text>
   <text x="34" y="116" class="day-label">Wed</text>
   <text x="34" y="144" class="day-label">Fri</text>
@@ -113,14 +113,14 @@
   <rect x="227" y="79" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.30s;" />
   <rect x="227" y="93" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.31s;" />
   <rect x="227" y="107" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.32s;" />
-  <rect x="227" y="121" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.34s;" />
+  <rect x="227" y="121" width="11" height="11" fill="#39d353" class="day-box anim-box" style="animation-delay: 0.34s;" />
   <rect x="227" y="135" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.35s;" />
   <rect x="227" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.37s;" />
   <rect x="241" y="65" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.30s;" />
   <rect x="241" y="79" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.31s;" />
   <rect x="241" y="93" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.32s;" />
   <rect x="241" y="107" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.34s;" />
-  <rect x="241" y="121" width="11" height="11" fill="#39d353" class="day-box anim-box" style="animation-delay: 0.35s;" />
+  <rect x="241" y="121" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.35s;" />
   <rect x="241" y="135" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.37s;" />
   <rect x="241" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.39s;" />
   <rect x="255" y="65" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.31s;" />
@@ -164,14 +164,14 @@
   <rect x="325" y="107" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.43s;" />
   <rect x="325" y="121" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.44s;" />
   <rect x="325" y="135" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.46s;" />
-  <rect x="325" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.47s;" />
+  <rect x="325" y="149" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.47s;" />
   <rect x="339" y="65" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.40s;" />
   <rect x="339" y="79" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.42s;" />
   <rect x="339" y="93" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.43s;" />
   <rect x="339" y="107" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.44s;" />
   <rect x="339" y="121" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.46s;" />
   <rect x="339" y="135" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.47s;" />
-  <rect x="339" y="149" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.49s;" />
+  <rect x="339" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.49s;" />
   <rect x="353" y="65" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.42s;" />
   <rect x="353" y="79" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.43s;" />
   <rect x="353" y="93" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.44s;" />
@@ -267,14 +267,14 @@
   <rect x="535" y="79" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.62s;" />
   <rect x="535" y="93" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.64s;" />
   <rect x="535" y="107" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.65s;" />
-  <rect x="535" y="121" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.67s;" />
+  <rect x="535" y="121" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.67s;" />
   <rect x="535" y="135" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.68s;" />
   <rect x="535" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.70s;" />
   <rect x="549" y="65" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.62s;" />
   <rect x="549" y="79" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.64s;" />
   <rect x="549" y="93" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.65s;" />
   <rect x="549" y="107" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.67s;" />
-  <rect x="549" y="121" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.68s;" />
+  <rect x="549" y="121" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.68s;" />
   <rect x="549" y="135" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.70s;" />
   <rect x="549" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.71s;" />
   <rect x="563" y="65" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.64s;" />
@@ -382,20 +382,14 @@
   <rect x="759" y="121" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.91s;" />
   <rect x="759" y="135" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.92s;" />
   <rect x="759" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.94s;" />
-  <rect x="773" y="65" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.86s;" />
-  <rect x="773" y="79" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.88s;" />
-  <rect x="773" y="93" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.89s;" />
-  <rect x="773" y="107" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.91s;" />
-  <rect x="773" y="121" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.92s;" />
-  <rect x="773" y="135" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.94s;" />
-  <rect x="773" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.95s;" />
-  <rect x="787" y="65" width="11" height="11" fill="#39d353" class="day-box anim-box" style="animation-delay: 0.88s;" />
-  <rect x="787" y="79" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.89s;" />
-  <rect x="787" y="93" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.91s;" />
-  <rect x="787" y="107" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.92s;" />
-  <rect x="787" y="121" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.94s;" />
-  <rect x="787" y="135" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.95s;" />
-  <rect x="787" y="149" width="11" height="11" fill="#161b22" class="day-box anim-box" style="animation-delay: 0.97s;" />
+  <rect x="773" y="65" width="11" height="11" fill="#39d353" class="day-box anim-box" style="animation-delay: 0.86s;" />
+  <rect x="773" y="79" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.88s;" />
+  <rect x="773" y="93" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.89s;" />
+  <rect x="773" y="107" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.91s;" />
+  <rect x="773" y="121" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.92s;" />
+  <rect x="773" y="135" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.94s;" />
+  <rect x="773" y="149" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.95s;" />
+  <rect x="787" y="65" width="11" height="11" fill="#006d32" class="day-box anim-box" style="animation-delay: 0.88s;" />
   <text x="59" y="190" class="day-label">Less</text>
   <rect x="86" y="181" width="11" height="11" fill="#161b22" class="day-box" />
   <rect x="100" y="181" width="11" height="11" fill="#0e4429" class="day-box" />
