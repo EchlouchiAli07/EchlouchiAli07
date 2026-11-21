@@ -13,6 +13,10 @@ __pycache__/
 .env.*
 !.env.example
 
+# Personal files kept locally only (source photo for portrait.svg, CV)
+photo/
+cv/
+
 # Intermediate files written by the generator scripts (not used by README)
 data/avatar-darkbg.png
 avi-ascii.svg
